@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<div class="about-section">
+    <h1>About Us Page</h1>
+    <p>Meet the people behind KhumaloCraft.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="/Images/_c13473c8-5aef-438e-a8aa-f7bd2af69387.jpg" width="200" >
+            <div class="container">
+                <h2>James Khumalo</h2>
+                <p class="title"><strong>CEO & Owner</strong></p>
+                <p>Visionary businessman James Khumalo founded KhumaloCraft Emporium as a platform for international e-commerce showcasing handcrafted goods. His ambition is to link up discerning consumers with global craftspeople. </p>
+                <p><button class="button blue-button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="~/images/_406726be-2a1a-4f42-b4d0-0e9df2e6e83a.jpg" width="100">
+            <div class="container">
+                <h2>Jamie Builder</h2>
+                <p class="title"><strong>CFO</strong></p>
+                <p>Ensuring the financial stability and expansion of KhumaloCraft Emporium is the responsibility of Jamie Builder, in his capacity as Chief Financial Officer. With a keen eye for detail and a strategic approach, Jamie is essential to the efficient management of financial resources in order to support the company's growth objectives. Collaborating closely with the CEO, Jamie makes sure financial strategies are in line with KhumaloCraft Emporium's overall vision, which helps the business succeed and last..</p>
+                <p><a href="mailto:bobbuilder@gmail.com">bobbuilder@gmail.com</a></p>
+                <p><button class="button blue-button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="~/images/_ef174b4f-de78-4748-94cf-efd20387b177.jpg" width="100">
+            <div class="container">
+                <h2>John Pineapple</h2>
+                <p class="title"><strong>Designer</strong></p>
+                <p>John Pineapple is a gifted designer committed to using eye-catching imagery and user-centered design to realize James Khumalo's vision. KhumaloCraft Emporium's brand is enhanced by John Pineapple, who creates immersive and user-friendly experiences with a profound understanding of e-commerce platforms and consumer behavior. In close collaboration with the CEO and interdisciplinary teams, John aims to develop a visually striking and seamless platform that highlights handcrafted items, with an emphasis on usability and accessibility for all users.</p>
+                <p><a href="mailto:johnpineapple@gmail.com">johnpineapple@gmail.com</a></p>
+                <p><button class="button blue-button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    <style >
+    .layout {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    img {
+        border-radius: 100%;
+    }
+
+
+    .blue-button {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .card img {
+        width: 25%; /* Adjust image size as needed */
+    border:0 px solid rgba (0,0,0, .125);    }
+</style>
