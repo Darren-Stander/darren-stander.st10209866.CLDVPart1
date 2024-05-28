@@ -1,0 +1,98 @@
+﻿@model CLD.Models.transactionTable
+@{
+    ViewData["Title"] = "Orders";
+    var orders = ViewData["Orders"] as List<transactionTable>;
+}
+
+<style>
+    .container {
+        margin: 20px auto;
+        max-width: 800px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    p {
+        font-size: 1.1em;
+        color: #666;
+    }
+
+    .btn-primary {
+        margin: 20px 0;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #e9e9e9;
+    }
+</style>
+
+<div class="container text-center">
+    <h1>Orders</h1>
+    <p>
+        Please ensure that orders have been made prior to viewing this page. If the below
+        table is empty, it is highly probable that no orders have yet to be made.
+    </p>
+    <button onclick="location.href='@Url.Action("Index", "Home")'" class="btn btn-primary">Back to Home</button>
+</div>
+
+<div class="container">
+    <h2>Order List:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>User ID</th>
+                <th>Product ID</th>
+                <th>Transaction Date</th>
+                <th>Transaction Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in orders)
+            {
+                <tr>
+                    <td>@order.transactionID</td>
+                    <td>@order.userID</td>
+                    <td>@order.productID</td>
+                    <td>@order.transactionDate</td>
+                    <td>@order.transactionAmount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

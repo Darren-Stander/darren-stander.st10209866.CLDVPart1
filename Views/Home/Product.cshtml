@@ -1,0 +1,56 @@
+﻿@model CLD.Models.product
+@{
+    ViewData["Title"] = "Product";
+}
+
+<h1>Product</h1>
+
+<body>
+    <form action="/Product/Products" method="post">
+        <input type="text" name="Name" placeholder="Name" required\>
+        <input type="text" name="Price" placeholder="Price" required>
+        <input type="text" name="Category" placeholder="Category" required>
+        <input type="text" name="Availability" placeholder="Availability" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+
+<style>
+    body {
+        font-family: sans-serif; /* Basic font for readability */
+        margin: 20px; /* Space around the body content */
+    }
+
+    form {
+        max-width: 400px; /* Limit form width to prevent it from taking up too much space */
+        margin: 0 auto; /* Center the form horizontally */
+        padding: 20px; /* Add padding around the form content */
+        border: 1px solid #ccc; /* Subtle border for visual separation */
+        border-radius: 5px; /* Slightly rounded corners for a modern look */
+    }
+
+    p {
+        margin-bottom: 10px; /* Add spacing below the paragraph */
+    }
+
+    input[type="text"] {
+        width: 100%; /* Make input fields take up full width */
+        padding: 10px; /* Padding for input fields */
+        margin-bottom: 15px; /* Space between input fields */
+        border: 1px solid #ccc; /* Input field border */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    button[type="submit"] {
+        background-color: #007bff; /* Blue button background */
+        color: white; /* White text */
+        padding: 10px 15px; /* Button padding */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded button corners */
+        cursor: pointer; /* Change cursor to pointer on hover */
+    }
+
+</style>
+
+

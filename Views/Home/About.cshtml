@@ -1,13 +1,98 @@
-﻿@{
+﻿@model CLD.Models.userTable
+
+@{
     ViewData["Title"] = "About";
 }
+<h1>About</h1>
+
+
+<div class="container">
+   
+    <p>You need to sign up on the website for the application.</p>
+    <form id="signupForm" action="/User/About" method="post">
+        <div class="signup-section">
+            <h2>Sign Up</h2>
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="text" name="Surname" placeholder="Surname" required>
+            <input type="email" name="Email" placeholder="example@gmail.com" required>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+<style>
+    body {
+        font-family: sans-serif;
+        margin: 20px;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #f9f9f9;
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    .signup-section {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+</style>
+
 
 <div class="about-section">
-    <h1>About Us Page</h1>
-    <p>Meet the people behind KhumaloCraft.</p>
+    <h4>Meet the people behind KhumaloCraft.</h4>
 </div>
 
 <h2 style="text-align:center">Our Team</h2>
+<div class="row">
     <div class="column">
         <div class="card">
             <img src="/Images/_c13473c8-5aef-438e-a8aa-f7bd2af69387.jpg" width="200" >
@@ -45,6 +130,7 @@
         </div>
     </div>
 </div>
+
 
 <style>
     <style >
